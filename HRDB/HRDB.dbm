@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.8.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLAccessControl="http:///org/eclipse/datatools/modelbase/sql/accesscontrol.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_bzf2cJjWEeW4F7V6R8arVg" name="HRDB" vendor="DB2 UDB" version="V10.1" schemas="_bznyQJjWEeW4F7V6R8arVg" authorizationIds="_bzrcoJjWEeW4F7V6R8arVg" federated="true">
+    <eAnnotations xmi:id="_bzf2cZjWEeW4F7V6R8arVg" source="ConnectionURI">
+      <details xmi:id="_bzf2cpjWEeW4F7V6R8arVg" key="ConnectionKey" value="HRDB1"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_bznyQJjWEeW4F7V6R8arVg" name="IIBADMIN" tables="_bzoZUJjWEeW4F7V6R8arVg _bzqOgJjWEeW4F7V6R8arVg" database="_bzf2cJjWEeW4F7V6R8arVg" owner="_bzrcoJjWEeW4F7V6R8arVg"/>
+  <LUW:LUWTable xmi:id="_bzoZUJjWEeW4F7V6R8arVg" name="DEPARTMENT" schema="_bznyQJjWEeW4F7V6R8arVg" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzoZUZjWEeW4F7V6R8arVg" name="DEPTNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzoZUpjWEeW4F7V6R8arVg" name="CHAR" length="3"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzoZU5jWEeW4F7V6R8arVg" name="DEPTNAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzoZVJjWEeW4F7V6R8arVg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="36"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzoZVZjWEeW4F7V6R8arVg" name="MGRNO">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzoZVpjWEeW4F7V6R8arVg" name="CHAR" length="6"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzoZV5jWEeW4F7V6R8arVg" name="ADMRDEPT" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzoZWJjWEeW4F7V6R8arVg" name="CHAR" length="3"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzoZWZjWEeW4F7V6R8arVg" name="LOCATION">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzoZWpjWEeW4F7V6R8arVg" name="CHAR" length="16"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_bzqOgJjWEeW4F7V6R8arVg" name="EMPLOYEE" schema="_bznyQJjWEeW4F7V6R8arVg" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOgZjWEeW4F7V6R8arVg" name="EMPNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOgpjWEeW4F7V6R8arVg" name="CHAR" length="6"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOg5jWEeW4F7V6R8arVg" name="FIRSTNME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOhJjWEeW4F7V6R8arVg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="12"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOhZjWEeW4F7V6R8arVg" name="MIDINIT">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOhpjWEeW4F7V6R8arVg" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOh5jWEeW4F7V6R8arVg" name="LASTNAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOiJjWEeW4F7V6R8arVg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOiZjWEeW4F7V6R8arVg" name="WORKDEPT">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOipjWEeW4F7V6R8arVg" name="CHAR" length="3"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOi5jWEeW4F7V6R8arVg" name="PHONENO">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOjJjWEeW4F7V6R8arVg" name="CHAR" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOjZjWEeW4F7V6R8arVg" name="HIREDATE">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_bzqOjpjWEeW4F7V6R8arVg" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOj5jWEeW4F7V6R8arVg" name="JOB">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOkJjWEeW4F7V6R8arVg" name="CHAR" length="8"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOkZjWEeW4F7V6R8arVg" name="EDLEVEL" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_bzqOkpjWEeW4F7V6R8arVg" name="SMALLINT" primitiveType="SMALLINT"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOk5jWEeW4F7V6R8arVg" name="SEX">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_bzqOlJjWEeW4F7V6R8arVg" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOlZjWEeW4F7V6R8arVg" name="BIRTHDATE">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_bzqOlpjWEeW4F7V6R8arVg" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOl5jWEeW4F7V6R8arVg" name="SALARY">
+      <containedType xsi:type="SQLDataTypes:FixedPrecisionDataType" xmi:id="_bzqOmJjWEeW4F7V6R8arVg" name="DECIMAL" primitiveType="DECIMAL" precision="9" scale="2"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOmZjWEeW4F7V6R8arVg" name="BONUS">
+      <containedType xsi:type="SQLDataTypes:FixedPrecisionDataType" xmi:id="_bzqOmpjWEeW4F7V6R8arVg" name="DECIMAL" primitiveType="DECIMAL" precision="9" scale="2"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_bzqOm5jWEeW4F7V6R8arVg" name="COMM">
+      <containedType xsi:type="SQLDataTypes:FixedPrecisionDataType" xmi:id="_bzqOnJjWEeW4F7V6R8arVg" name="DECIMAL" primitiveType="DECIMAL" precision="9" scale="2"/>
+    </columns>
+  </LUW:LUWTable>
+  <SQLAccessControl:User xmi:id="_bzrcoJjWEeW4F7V6R8arVg" name="IIBADMIN" description="" ownedSchema="_bznyQJjWEeW4F7V6R8arVg" Database="_bzf2cJjWEeW4F7V6R8arVg"/>
+</xmi:XMI>
