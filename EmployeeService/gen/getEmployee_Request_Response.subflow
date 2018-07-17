@@ -9,7 +9,7 @@
       <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="20,20">
         <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="gen/getEmployee_Request_Response" pluginId="EmployeeService"/>
       </nodes>
-      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="320,20">
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="439,29">
         <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/getEmployee_Request_Response" pluginId="EmployeeService"/>
       </nodes>
       <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="159,144" mappingExpression="msl://{{mbsharedlib:EmployeeService_interface_and_maps}default}#getEmployee_WS">
