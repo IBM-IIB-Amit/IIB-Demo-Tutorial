@@ -3,6 +3,7 @@
 	<name>Employee_Esql</name>
 	<comment></comment>
 	<projects>
+		<project>esb_util</project>
 		<project>Esb_Util</project>
 	</projects>
 	<buildSpec>

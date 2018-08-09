@@ -1,4 +1,4 @@
-package com.esb.landmark;
+package com.esb.landmarkgroup;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
