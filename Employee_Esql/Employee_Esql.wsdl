@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Employee_Esql" targetNamespace="http://Employee_Esql" xmlns:bons1="http://www.example.org/EmployeeDetails" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Employee_Esql" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="Employee_EsqlHttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="Employee_Esql_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://Employee_Esql" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+            <xsd:import namespace="http://www.example.org/EmployeeDetails" schemaLocation="EmployeeDetails.xsd"/>
+            <xsd:include schemaLocation="Employee_Esql_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="getEmployeeRequestMsg">
+    <wsdl:part element="tns:getEmployee" name="getEmployeeParameters"/>
+  </wsdl:message>
+  <wsdl:message name="getEmployeeResponseMsg">
+    <wsdl:part element="tns:getEmployeeResponse" name="getEmployeeResult"/>
+  </wsdl:message>
+  <wsdl:portType name="Employee_Esql">
+    <wsdl:operation name="getEmployee">
+      <wsdl:input message="tns:getEmployeeRequestMsg" name="getEmployeeRequest"/>
+      <wsdl:output message="tns:getEmployeeResponseMsg" name="getEmployeeResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Employee_EsqlHttpBinding" type="tns:Employee_Esql">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getEmployee">
+      <soap:operation soapAction="http://Employee_Esql/getEmployee"/>
+      <wsdl:input name="getEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="Employee_EsqlHttpService">
+    <wsdl:port binding="tns:Employee_EsqlHttpBinding" name="Employee_EsqlHttpPort">
+      <soap:address location="http://localhost:7800/Employee_Esql"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,13 @@
+
+
+Importing file: D:\IIB\Workspace\Esql Modules\Employee_Esql\Employee_Esql.wsdl
+
+The WSDL import will proceed with bindings Employee_EsqlHttpBinding.
+Creating wsdl schema document for platform:/resource/Employee_Esql/Employee_Esql.wsdl.
+Parsing wsdl binding {http://Employee_Esql}Employee_EsqlHttpBinding.
+Parsing wsdl binding input getEmployee.
+Parsing wsdl binding output getEmployee.
+Processing doc style for operation getEmployee.
+Populating WSDL schema Employee_Esql.xsd.
+Creating file Employee_Esql.xsd in the workspace.
+Copying source WSDL Employee_Esql.wsdl to Employee_Esql.wsdl.

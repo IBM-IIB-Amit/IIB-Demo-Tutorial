@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="gen" version="8.0.5.0" xmlns:map="gen">
+    <input path="/Employee_Esql_InlineSchema1.xsd"/>
+    <output path="/Employee_Esql_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.example.org/EmployeeDetails"/>
+        <namespace kind="supplement" prefix="io2" uri="http://Employee_Esql"/>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="Employee_Map">
+        <input namespace="http://Employee_Esql" path="mb:msg(getEmployee,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_getEmployee"/>
+        <output namespace="http://Employee_Esql" path="mb:msg(getEmployeeResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_getEmployeeResponse"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_getEmployee/Properties"/>
+            <output path="$ComIbmMessageAssembly_getEmployeeResponse/Properties"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_getEmployee/getEmployee/EmployeeRequest/EmpName"/>
+            <output path="$ComIbmMessageAssembly_getEmployeeResponse/getEmployeeResponse/EmployeeResponse/EmpName"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_getEmployee/getEmployee/EmployeeRequest/EmpId" var="EmpId"/>
+            <output path="$ComIbmMessageAssembly_getEmployeeResponse/getEmployeeResponse/EmployeeResponse/EmpId"/>
+        </move>
+        <function ref="fn:concat">
+            <input path="$ComIbmMessageAssembly_getEmployee/getEmployee/EmployeeRequest/EmpCity" var="EmpCity"/>
+            <output path="$ComIbmMessageAssembly_getEmployeeResponse/getEmployeeResponse/EmployeeResponse/EmpCity"/>
+            <param name="string1" value="$EmpCity"/>
+            <param name="string2" value="'_CITY'"/>
+        </function>
+    </mappingDeclaration>
+</mappingRoot>
