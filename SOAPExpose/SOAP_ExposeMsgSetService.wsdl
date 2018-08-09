@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="SOAP_ExposeMsgSet" targetNamespace="http://tempuri.org/SOAP_ExposeMsgSet" xmlns="http://tempuri.org/SOAP_ExposeMsgSet" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/SOAP_ExposeMsgSet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="SOAP_ExposeMsgSetService_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="SOAP_ExposeMsgSetSOAP_HTTP_Binding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/SOAP_ExposeMsgSet" xmlns:mrm="http://tempuri.org/SOAP_ExposeMsgSet">
+<xsd:include schemaLocation="SOAP_ExposeMsgSetService_InlineSchema1.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="addOperation_in">
+    <wsdl:part element="Req" name="Req"/>
+  </wsdl:message>
+  <wsdl:message name="addOperation_out">
+    <wsdl:part element="Res" name="Res"/>
+  </wsdl:message>
+  <wsdl:message name="addOperation_fault1">
+    <wsdl:part element="ErrorMsg" name="ErrorMsg"/>
+  </wsdl:message>
+  <wsdl:portType name="SOAP_ExposeMsgSetPortType">
+    <wsdl:operation name="addOperation">
+      <wsdl:input message="addOperation_in" name="addOperation_Input"/>
+      <wsdl:output message="addOperation_out" name="addOperation_Output"/>
+      <wsdl:fault message="addOperation_fault1" name="addOperation_Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAP_ExposeMsgSetSOAP_HTTP_Binding" type="SOAP_ExposeMsgSetPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addOperation">
+      <soap:operation soapAction="addAction"/>
+      <wsdl:input name="addOperation_Input">
+        <soap:body parts="Req" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addOperation_Output">
+        <soap:body parts="Res" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="addOperation_Fault">
+        <soap:fault name="addOperation_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SOAP_ExposeMsgSetSOAP_HTTP_Service">
+    <wsdl:port binding="SOAP_ExposeMsgSetSOAP_HTTP_Binding" name="SOAP_ExposeMsgSetSOAP_HTTP_Port">
+      <soap:address location="http://localhost:7800/SOAP_ExposeMsgSetSOAP_HTTP_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

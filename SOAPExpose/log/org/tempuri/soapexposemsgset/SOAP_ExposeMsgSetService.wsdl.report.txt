@@ -1,0 +1,23 @@
+
+
+Importing file: D:\IIB\Workspace\SOAP WebService Expose\SOAP_ExposeMsgProj\SOAP_ExposeMsgSetService.wsdl
+
+Copying source WSDL SOAP_ExposeMsgSetService.wsdl to SOAP_ExposeMsgSetService.wsdl.
+The WSDL import will proceed with bindings SOAP_ExposeMsgSetSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///D:/IIB/Workspace/SOAP WebService Expose/SOAP_ExposeMsgProj/SOAP_ExposeMsgSetService.wsdl.
+Parsing wsdl binding {http://tempuri.org/SOAP_ExposeMsgSet}SOAP_ExposeMsgSetSOAP_HTTP_Binding.
+Parsing wsdl binding input addOperation.
+Parsing wsdl binding output addOperation.
+Parsing wsdl binding fault addOperation_Fault.
+Processing doc style for operation addOperation.
+Populating WSDL schema SOAP_ExposeMsgSetService.xsd.
+Creating file SOAP_ExposeMsgSetService.xsd in the workspace.
+Creating file SOAP_ExposeMsgSetService_InlineSchema1.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.117 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
